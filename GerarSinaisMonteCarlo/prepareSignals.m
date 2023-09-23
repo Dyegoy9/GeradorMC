@@ -1,17 +1,17 @@
-function prepareSignals(Server,snr)
+function prepareSignals(Server)
     if ~Server
         NsinaisTotal = 1000;%Numero de sinais totais que serao gerados. Obrigatoriamente multiplo de TamanhoGrupo (Pois gera de TamanhoGrupo em TamanhoGrupo)
         TamanhoGrupo = 100;
     else
         NsinaisTotal = 50000;
-        TamanhoGrupo = 5000;
+        TamanhoGrupo = 10000;
     end
     Njanelas = [60];% 90 120];
     NFFT = 1000;
     SFREQ = 80;
     FS = 1000;
     %SNRfun = @()-15+5*randn;    % SNR aleatoria, centrada em -15, com desvio padrao igual a 10
-    %snr = -12;
+    snr = -10
     SNRfun = @()snr;
     Nfun = 14;
 

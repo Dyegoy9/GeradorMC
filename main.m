@@ -10,8 +10,6 @@ DeleteMonteCarloData = false;
     try
         mkdir('MC')
     catch
-        
-SNR = -20:0.5:-10;
-parfor i = SNR
-    GenerateMonteCarlo(Server,i);
-end
+    end        
+    GenerateMonteCarlo(Server);
+exit()
