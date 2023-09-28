@@ -8,7 +8,8 @@ DeleteMonteCarloData = false;
         end
     end
     try
-        mkdir('MC')
+        mkdir('MC');
+        mkdir('MC_curva');
     catch
     end        
     GenerateMonteCarlo(Server);
